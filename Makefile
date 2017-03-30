@@ -29,6 +29,8 @@ apu2:
 	@install -m 0644 -g wheel -o root /tmp/boot.conf /
 	@rm /tmp/hostname.{em0,em1,em2,bridge0,vether0} /tmp/boot.conf
 	@rm /tmp/{pf,relayd,httpd}.conf /tmp/sysctl.conf /tmp/dhcpd.conf /tmp/dhclient.conf
+	@rcctl enable dhcpd && rcctl set dhcpd flags vether0 em1 em2
+	@rcctl enable ntpd && rcctl set ntpd flags -s
 	@echo ""
 	@echo "[+] All done, you can reboot now."
 	@echo ""

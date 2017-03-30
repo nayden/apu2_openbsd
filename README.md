@@ -3,6 +3,13 @@
 The idea of this repo is to setup an [APU2](http://pcengines.ch/apu2c4.htm) with [OpenBSD](http://openbsd.org) as OS, for
 a Firewall/Gateway/AP box at home (or maybe a company).
 
+At this time you should set the right date on your APU2 with something like:
+
+```
+# date 201703300045
+Thu Mar 30 00:45:00 -03 2017
+```
+
 ## Makefile usage
 
 Assuming that you already have OpenBSD installed (with compXX.tgz) on your APU2 with just an internet connection, you can do this:
