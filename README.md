@@ -15,6 +15,7 @@ Thu Mar 30 00:45:00 -03 2017
 Assuming that you already have OpenBSD installed (with compXX.tgz) on your APU2 with just an internet connection, you can do this:
 
 ```
+# echo 'https://ftp5.usa.openbsd.org/pub/OpenBSD/' > /etc/installurl # Skip this if you already have a mirror.
 # cd /tmp
 # ftp -V https://raw.githubusercontent.com/gonzalo-/apu2_openbsd/master/Makefile
 # make apu2
@@ -44,6 +45,7 @@ sysctl.conf  100% |*************************************************************
 Assuming that you already have OpenBSD installed on your APU2 with just an internet connection, you can do this:
 
 ```
+# echo 'https://ftp5.usa.openbsd.org/pub/OpenBSD/' > /etc/installurl # Skip this if you already have a mirror.
 # cd /tmp
 # ftp -o - https://raw.githubusercontent.com/gonzalo-/apu2_openbsd/master/apu2.sh | sh -
 Trying 151.101.24.133...
