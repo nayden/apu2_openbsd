@@ -5,6 +5,12 @@
 ## Debug
 #set -x
 
+## Check for root
+if test $(whoami) != root; then
+	doas "$0" "$@"
+	exit $?
+fi
+
 echo ""
 echo "[+] Downloading files from https://github.com/gonzalo-/apu2_openbsd"
 echo ""
